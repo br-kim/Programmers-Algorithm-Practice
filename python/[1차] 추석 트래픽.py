@@ -13,7 +13,6 @@ def sectosec(sec):
 
 
 def isInRange1(ori, ran):
-    # print("ori", ori, "ran", ran)
     ori_begin = ori[0]
     ori_end = ori[1]
     ran_begin = ran[0]
