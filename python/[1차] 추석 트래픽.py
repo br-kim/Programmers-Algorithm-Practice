@@ -28,7 +28,7 @@ def isInRange1(ori, ran):
 
 def solution(lines):
     arr = []
-    ans = []
+    answer = -1
     for line in lines:
         end = timetosec(line.split()[1])
         begin = timetosec(line.split()[1]) - sectosec(line.split()[2])
@@ -38,8 +38,9 @@ def solution(lines):
         for ii in range(len(arr)):
             if isInRange1(arr[i], arr[ii]):
                 a += 1
-        ans.append(a)
-    return max(ans)
+        if a > answer:
+            answer = a
+    return answer
 
 
 test1 = ["2016-09-15 00:00:00.000 3s"]
