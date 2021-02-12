@@ -4,9 +4,9 @@ def return_first(board):
     for idx, val in enumerate(board):
         if val != 0:
             board[idx] = 0
-            return val
+            return val, board
     else:
-        return 0
+        return 0, board
 
 
 def solution(board, moves):
@@ -16,10 +16,10 @@ def solution(board, moves):
     for move in moves:
         for idx, one_board in enumerate(my_board):
             if idx+1 == move:
-                val = return_first(list(one_board))
+                val, new_board = return_first(list(one_board))
                 if val == 0:
                     continue
-                my_board[idx] = one_board
+                my_board[idx] = new_board
                 goal.append(val)
                 if len(goal) >= 2:
                     if goal[-1] == goal[-2]:
