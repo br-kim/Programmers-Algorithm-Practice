@@ -1,3 +1,5 @@
+# https://programmers.co.kr/learn/courses/30/lessons/72410
+
 def firstPreprocess(string):
     return string.lower()
 
