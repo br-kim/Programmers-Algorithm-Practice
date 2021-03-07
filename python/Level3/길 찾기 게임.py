@@ -18,19 +18,19 @@ class Node:
 ans = []
 
 
-def traverse1(node):
+def traversal1(node):
     global ans
     if node:
         ans.append(node.num)
-        traverse1(node.left)
-        traverse1(node.right)
+        traversal1(node.left)
+        traversal1(node.right)
 
 
-def traverse2(node):
+def traversal2(node):
     global ans
     if node:
-        traverse2(node.left)
-        traverse2(node.right)
+        traversal2(node.left)
+        traversal2(node.right)
         ans.append(node.num)
 
 
@@ -61,10 +61,10 @@ def solution(nodeinfo):
         top = nodelist[0]
     global ans
     ans = []
-    traverse1(nodelist[0])
+    traversal1(nodelist[0])
     answer.append(ans)
     ans = []
-    traverse2(nodelist[0])
+    traversal2(nodelist[0])
     answer.append(ans)
     return answer
 
