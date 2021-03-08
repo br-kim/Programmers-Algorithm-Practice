@@ -6,13 +6,11 @@ def solution(n, results):
     answer = 0
     for i in range(n):
         graph[i + 1] = [[], []]
-    # print(graph)
     for i in results:
         win = i[0]
         lose = i[1]
         graph[lose][0].append(win)
         graph[win][1].append(lose)
-    # print(graph)
     for i in range(n):
         q = [i + 1]
         visited = [i + 1]
@@ -22,7 +20,6 @@ def solution(n, results):
                 if _next not in visited:
                     q.append(_next)
                     visited.append(_next)
-        # print(visited)
         q = [i + 1]
         while q:
             now = q.pop(0)
@@ -30,7 +27,6 @@ def solution(n, results):
                 if _next not in visited:
                     q.append(_next)
                     visited.append(_next)
-        # print(visited)
         if len(visited) == n:
             answer += 1
     return answer
