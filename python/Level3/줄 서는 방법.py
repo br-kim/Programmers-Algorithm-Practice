@@ -20,8 +20,7 @@ def solution(n, k):
         result.append(val2)
     answer = []
     for r in result:
-        answer.append(ori[r])
-        ori.pop(r)
+        answer.append(ori.pop(r))
     return answer
 
 
