@@ -1,4 +1,4 @@
-# https://programmers.co.kr/learn/courses/30/lessons/76502
+# https://programmers.co.kr/learn/courses/30/lessons/81301
 
 def solution(s):
     word = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4,
