@@ -1,13 +1,14 @@
 # https://programmers.co.kr/learn/courses/30/lessons/17681
 
+
 def change(n):
     n = bin(n)[2:]
     res = ""
     for i in n:
-        if i == '1':
-            res += '#'
+        if i == "1":
+            res += "#"
         else:
-            res += ' '
+            res += " "
     return res
 
 
